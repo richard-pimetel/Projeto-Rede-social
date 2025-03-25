@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="perfil.css">
+    <script src="perfil.js" defer></script>
+    <title>Perfil do Usuário</title>
+</head>
+<body>
+    <div class="profile-wrapper">
+        <!-- Coluna Esquerda -->
+        <div class="profile-sidebar">
+            <img src="./img/foto_perfil.png" alt="Cazé TV" class="profile-pic">
+            <h1 class="profile-name">Cazé tv</h1>
+            
+            <div class="stats-container">
+                <div class="stat-box">
+                    <div class="stat-value" id="postsCount">2 mil</div>
+                    <div class="stat-label">Publicações</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="followersCount">989mil</div>
+                    <div class="stat-label">Seguidores</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="followingCount">459</div>
+                    <div class="stat-label">Seguindo</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">1.2mi</div>
+                    <div class="stat-label">Curtidas</div>
+                </div>
+            </div>
+            
+            
+            <button class="action-button primary-btn" id="followBtn" style="width: 100%;">
+                <span>✓</span> Seguir
+            </button>
+            <button class="action-button danger-btn" id="unfollowBtn" style="width: 100%; display: none;">
+                <span>✕</span> Deixar de seguir
+            </button>
+        </div>
+        
+        <!-- Coluna Direita -->
+        <div class="profile-main">
+            <div class="bio-section">
+                <h2 class="section-title">Biografia</h2>
+                <div class="bio-content">
+                    <p class="bio-text" id="bioIntro">(Apaixonado por futebol e corrida!)</p>
+                    <ul class="bio-details" id="bioDetailsList">
+                        <li class="bio-detail">Esportes favoritos (futebol, basquete, corrida, etc.)</li>
+                        <li class="bio-detail">Time do coração: Corinthians</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="action-area">
+                <button class="action-button primary-btn" id="messageBtn">
+                    <span>✉</span> Mensagem
+                </button>
+                <button class="action-button secondary-btn" id="editBioBtn">
+                    <span>✎</span> Editar Biografia
+                </button>
+                <button class="action-button secondary-btn" id="editProfileBtn">
+                    <span>⚙</span> Editar Perfil
+                </button>
+            </div>
+            
+            <div class="profile-nav">
+                <a href="#" class="nav-item active">Home</a>
+                <a href="#" class="nav-item">Mensagens</a>
+                <a href="#" class="nav-item">Configurações</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <!-- Modal de Edição de Biografia -->
+    <div class="modal-overlay" id="bioModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Editar Biografia</h3>
+                <button class="modal-close" id="closeBioModal">&times;</button>
+            </div>
+            <textarea class="bio-textarea" id="bioEditor" placeholder="Digite sua biografia..."></textarea>
+            <div class="modal-actions">
+                <button class="modal-button cancel" id="cancelBioEdit">Cancelar</button>
+                <button class="modal-button save" id="saveBio">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Edição de Perfil -->
+    <div class="modal-overlay" id="profileModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Editar Perfil</h3>
+                <button class="modal-close" id="closeProfileModal">&times;</button>
+            </div>
+            <div class="profile-form">
+                <div class="profile-pic-upload">
+                    <img id="profilePicPreview" src="./img/foto_perfil.png" class="profile-pic-preview" alt="Pré-visualização">
+                    <label for="fileInput" class="upload-button">Alterar Foto</label>
+                    <input type="file" id="fileInput" accept="image/*">
+                </div>
+                
+                <div class="form-group">
+                    <label for="profileNameInput" class="form-label">Nome do Perfil</label>
+                    <input type="text" id="profileNameInput" class="form-input" placeholder="Digite o nome do perfil">
+                </div>
+                
+                <div class="form-group">
+                    <label for="profileUsername" class="form-label">Nome de Usuário</label>
+                    <input type="text" id="profileUsername" class="form-input" placeholder="Digite o nome de usuário">
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-button cancel" id="cancelProfileEdit">Cancelar</button>
+                <button class="modal-button save" id="saveProfile">Salvar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
