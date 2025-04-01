@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="esqueceu_senha.css">
+    <script src="esqueceu_senha.js" defer></script>
+    <title>Redefinir senha </title>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="logo">Esporte<span>ON</span></h1>
+
+        <!-- Passo 1: Esqueceu a Senha -->
+        <div class="step active" id="step1">
+            <h1>Esqueceu a senha?</h1>
+            <p class="text-center">Redefina a senha em duas etapas</p>
+            
+            <div class="form-group mt-3">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail">
+                <div class="error-message" id="email-error">Por favor, insira um e-mail válido</div>
+            </div>
+            
+            <button class="btn" id="send-email-btn">Enviar</button>
+        </div>
+
+        <!-- Passo 2: Código de Verificação -->
+        <div class="step" id="step2">
+            <h1>Verificação de código</h1>
+            <p class="text-center">Acabamos de enviar um código para seu e-mail.</p>
+            <p class="text-center">Insira o código de verificação de 6 dígitos enviado para seu e-mail.</p>
+            
+            <div class="code-inputs" id="code-container">
+                <input type="text" class="code-input" maxlength="1" data-index="0">
+                <input type="text" class="code-input" maxlength="1" data-index="1">
+                <input type="text" class="code-input" maxlength="1" data-index="2">
+                <input type="text" class="code-input" maxlength="1" data-index="3">
+                <input type="text" class="code-input" maxlength="1" data-index="4">
+                <input type="text" class="code-input" maxlength="1" data-index="5">
+            </div>
+            
+            <div class="error-message" id="code-error">Código inválido. Por favor, tente novamente.</div>
+            
+            <button class="btn" id="verify-code-btn">Enviar</button>
+            
+            <div class="resend-code text-center">
+                Não recebeu o código? <span class="link" id="resend-code">Reenviar código</span>
+            </div>
+            
+            <div class="text-center mt-3">
+                <span class="link" id="change-email">Alterar e-mail</span>
+            </div>
+        </div>
+
+        <!-- Passo 3: Nova Senha -->
+        <div class="step" id="step3">
+            <h1>Criação de senha nova</h1>
+            
+            <div class="form-group">
+                <label for="new-password">Senha nova</label>
+                <div class="password-container">
+                    <input type="password" id="new-password" placeholder="Digite sua nova senha">
+                    <span class="toggle-password" id="toggle-password">Mostrar</span>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm-password">Reinsira a senha nova</label>
+                <div class="password-container">
+                    <input type="password" id="confirm-password" placeholder="Confirme sua nova senha">
+                    <span class="toggle-password" id="toggle-confirm-password">Mostrar</span>
+                </div>
+                <div class="error-message" id="password-error">As senhas não coincidem</div>
+            </div>
+            
+            <div class="requirements">
+                <p>Sua senha deve conter:</p>
+                <div class="requirement" id="length-req">
+                    <i>✓</i> <span>Pelo menos 8 caracteres</span>
+                </div>
+                <div class="requirement" id="number-req">
+                    <i>✓</i> <span>Pelo menos 1 número</span>
+                </div>
+                <div class="requirement" id="special-req">
+                    <i>✓</i> <span>Pelo menos 1 caractere especial</span>
+                </div>
+            </div>
+            
+            <p class="mt-3">É necessário que todos os dispositivos acessem sua conta com a nova senha</p>
+            
+            <button class="btn" id="reset-password-btn">Redefinir Senha</button>
+        </div>
+
+        <!-- Mensagem de Sucesso -->
+        <div class="step" id="success-message">
+            <h1>Senha redefinida com sucesso!</h1>
+            <p class="text-center">Sua senha foi alterada com sucesso. Agora você pode fazer login com sua nova senha.</p>
+            <button class="btn btn-secondary" id="go-to-login">Ir para login</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
