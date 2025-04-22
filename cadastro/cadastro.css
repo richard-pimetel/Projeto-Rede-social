@@ -1,3 +1,4 @@
+/* Reset e fontes */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Corpo da página */
 body {
     background-color: #0A2A5E;
     display: flex;
@@ -14,11 +16,13 @@ body {
     padding: 20px;
 }
 
+/* Container geral */
 .register-container {
     width: 100%;
     max-width: 500px;
 }
 
+/* Cartão de cadastro */
 .register-card {
     background: #fff;
     border-radius: 15px;
@@ -26,6 +30,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+/* Logo e descrição */
 .logo-container {
     text-align: center;
     margin-bottom: 30px;
@@ -47,12 +52,14 @@ body {
     margin-top: 5px;
 }
 
+/* Formulário */
 .register-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+/* Grupo de campos */
 .form-group {
     position: relative;
     margin-bottom: 15px;
@@ -89,6 +96,7 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Linha de foco */
 .underline {
     position: absolute;
     bottom: 0;
@@ -103,6 +111,7 @@ body {
     width: 100%;
 }
 
+/* Botão de cadastro */
 .submit-btn {
     background-color: #0A2A5E;
     color: white;
@@ -127,23 +136,7 @@ body {
     box-shadow: 0 5px 15px rgba(10, 42, 94, 0.3);
 }
 
-.login-link {
-    text-align: center;
-    margin-top: 20px;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.login-link a {
-    color: #0A2A5E;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.login-link a:hover {
-    text-decoration: underline;
-}
-
+/* Spinner de carregamento */
 .spinner {
     width: 20px;
     height: 20px;
@@ -161,6 +154,7 @@ body {
     display: none;
 }
 
+/* Mensagem de erro */
 .error-message {
     color: #e74c3c;
     font-size: 0.8rem;
@@ -176,4 +170,22 @@ body {
     padding: 10px;
     background-color: #ffeeee;
     border-radius: 4px;
+}
+
+/* Link de login */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #0A2A5E;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
 }

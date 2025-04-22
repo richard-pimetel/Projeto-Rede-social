@@ -130,4 +130,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         loginForm.appendChild(errorElement);
     }
+document.getElementById('linkCriarConta').addEventListener('click', () => {
+    window.location.href = '../cadastro/cadastro.html';
 });
+
+document.getElementById('linkEsqueceuSenha').addEventListener('click', () => {
+    window.location.href = '../esqueceu-senha/esqueceu_senha.html';
+});
+})

@@ -18,15 +18,15 @@
 
             <form id="registerForm" class="register-form">
                 <div class="form-group">
-                    <input type="text" id="nome" name="nome" required>
-                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome_usuario" name="nome" required>
+                    <label for="nome_usuario">Nome Completo</label>
                     <div class="underline"></div>
                     <div class="error-message"></div>
                 </div>
 
                 <div class="form-group">
-                    <input type="email" id="email" name="email" required>
-                    <label for="email">E-mail</label>
+                    <input type="email" id="email_usuario" name="email" required>
+                    <label for="email_usuario">E-mail</label>
                     <div class="underline"></div>
                     <div class="error-message"></div>
                 </div>
@@ -39,27 +39,25 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="password" id="confirmarSenha" required>
-                    <label for="confirmarSenha">Confirmar Senha</label>
+                    <input type="password" id="confirmar_senha_usuario" required>
+                    <label for="confirmar_senha_usuario">Confirmar Senha</label>
                     <div class="underline"></div>
                     <div class="error-message"></div>
                 </div>
 
                 <div class="form-group">
-                    <input type="text" id="senhaRecuperacao" name="senhaRecuperacao" required>
-                    <label for="senhaRecuperacao">Palavra de Recuperação</label>
+                    <input type="text" id="palavra_chave_usuario" name="senhaRecuperacao" required>
+                    <label for="palavra_chave_usuario">Palavra de Recuperação</label>
                     <div class="underline"></div>
                     <div class="error-message"></div>
                 </div>
 
-                <button type="submit" class="submit-btn" id="btnCadastrar">
+                <!-- Botão -->
+                <button type="button" class="submit-btn" id="botao-cadastro">
                     <span class="btn-text">Cadastrar</span>
                     <div class="spinner hidden" id="spinner"></div>
                 </button>
 
-                <div class="login-link">
-                    Já tem uma conta? <a href="../login/index.html">Faça login</a>
-                </div>
             </form>
         </div>
     </div>

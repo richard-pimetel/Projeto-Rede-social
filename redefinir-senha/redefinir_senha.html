@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style_recuperacao.css" />
+  <script src="redefinir_senha.js" defer></script>
+  <title>Redefinir Senha</title>
+</head>
+<body>
+  <div class="container">
+    <div class="esqueceu_a_senha" id="informacoes_senha">
+      <div class="logo">
+        <img src="img/key.png" alt="Logo redefinir senha" />
+      </div>
+      <div class="informacoes">
+        <h3>Definir nova senha</h3>
+      </div>
+    </div>
+
+    <div class="card" id="card_recuperacao">
+      <div class="input-grupo_recuperacao">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite a nova senha" />
+      </div>
+
+      <div class="input-grupo_recuperacao">
+        <label for="confirmar_senha">Confirmar Senha</label>
+        <input type="password" id="confirmar_senha" placeholder="Confirme a nova senha" />
+      </div>
+
+      <button id="botao-recuperacao">Redefinir Senha</button>
+    </div>
+  </div>
+</body>
+</html>
